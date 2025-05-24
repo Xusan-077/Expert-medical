@@ -164,6 +164,7 @@
         array.forEach((el) => {
           justlist.innerHTML += `
          <li class="blog__item">
+              <a href="./app.html?id=${el.id}">
               <img src="./img/blog__img1.svg" alt="" class="blog__item-img" />
 
               <div class="blog__item-text-blog">
@@ -177,6 +178,7 @@
 
                 <span class="blog__item-data">${el.date}</span>
               </div>
+              </a>
             </li>
     `;
         });

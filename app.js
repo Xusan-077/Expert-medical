@@ -2,7 +2,7 @@ let elinner = document.querySelector(".xizmat-section__inner");
 
 let id = new URLSearchParams(window.location.search).get("id");
 
-let find = servis.find((el) => el.id == id);
+let find = servis.find((el) => el.id == id) || blog.find((el) => el.id == id);
 
 elinner.innerHTML = `
        <img src="./img/servis-img1.svg" alt="" class="xizmat-section__img" />
