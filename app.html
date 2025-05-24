@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/main.css" />
+  </head>
+  <style>
+    .page__hero-title {
+      text-align: center;
+    }
+
+    @media (max-width: 600px) {
+      .page__hero-inner {
+        padding: 50px 0;
+      }
+    }
+  </style>
+  <body>
+    <header class="header">
+      <div class="container">
+        <div class="header__inner">
+          <button class="header__burger-btn">
+            <img src="./img/burger.svg" alt="" class="header__burger" />
+          </button>
+
+          <div class="header-burger">
+            <ul class="header__burger-list">
+              <li class="header__burger-item">
+                <a href="./index.html" class="header__link">Biz haqimizda</a>
+              </li>
+              <li class="header__burger-item">
+                <a href="./Xizmatlarimiz.html" class="header__link"
+                  >Xizmatlarimiz</a
+                >
+              </li>
+              <li class="header__burger-item">
+                <a href="./Shifokorlar.html" class="header__link"
+                  >Shifokorlar</a
+                >
+              </li>
+              <li class="header__burger-item">
+                <a href="./Yangiliklar.html" class="header__link"
+                  >Yangiliklar</a
+                >
+              </li>
+              <li class="header__burger-item">
+                <a href="./index.html" class="header__link">Kontaktlar</a>
+              </li>
+            </ul>
+          </div>
+
+          <a href="./index.html" class="header__logo-link">
+            <img src="./img/side-logo.svg" alt="" class="header__logo" />
+          </a>
+
+          <ul class="header__list">
+            <li class="header__item">
+              <a href="./index.html" class="header__link">Biz haqimizda</a>
+            </li>
+            <li class="header__item">
+              <a href="./Xizmatlarimiz.html" class="header__link"
+                >Xizmatlarimiz</a
+              >
+            </li>
+            <li class="header__item">
+              <a href="./Shifokorlar.html" class="header__link">Shifokorlar</a>
+            </li>
+            <li class="header__item">
+              <a href="./Yangiliklar.html" class="header__link">Yangiliklar</a>
+            </li>
+            <li class="header__item">
+              <a href="./index.html" class="header__link">Kontaktlar</a>
+            </li>
+          </ul>
+
+          <button class="header__language">UZ</button>
+        </div>
+      </div>
+    </header>
+
+    <div class="page__hero">
+      <div class="container">
+        <div class="page__hero-inner">
+          <h1 class="page__hero-title">Xizmatimiz tafsilotlari</h1>
+          <a href="./index.html" class="page__hero-link"
+            >Bosh sahifa > Xizmatlarimiz</a
+          >
+        </div>
+      </div>
+    </div>
+
+    <section class="xizmat-section">
+      <div class="container">
+        <div class="xizmat-section__inner"></div>
+      </div>
+    </section>
+
+    <section class="mutaxasis">
+      <div class="container">
+        <div class="mutaxasis__inner">
+          <div class="xizmat__top">
+            <div class="xizmat__top-text-blog">
+              <h1 class="xizmat__title">Bizning mutaxassislarimiz</h1>
+              <span class="xizmat__span"></span>
+            </div>
+            <button
+              class="xizmat__all-btn mutaxasis__all-btn mutaxasis__all-btn--active"
+            >
+              Barcha xizmatlar
+            </button>
+          </div>
+
+          <ul class="mutaxasis__list">
+            <li class="mutaxasis__item">
+              <a href="#" class="mutaxasis__link">
+                <img
+                  src="./img/mutaxasis__img1.svg"
+                  alt=""
+                  class="mutaxasis__img"
+                />
+
+                <div class="mutaxasis__text-blog">
+                  <h1 class="mutaxasis__item-title">
+                    Ortiqov Aziz Farixdjanovich
+                  </h1>
+                  <p class="mutaxasis__item-p">Дерматология</p>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <script src="./servis.js"></script>
+    <script src="./app.js"></script>
+    <script>
+      //header
+      let elheaderburgerbtn = document.querySelector(".header__burger-btn");
+      let elheaderburger = document.querySelector(".header-burger");
+
+      elheaderburgerbtn.onclick = () => {
+        elheaderburger.classList.toggle("block");
+      };
+      //array
+      let elmutaxasislist = document.querySelector(".mutaxasis__list");
+
+      function domgamutaxasis(array, justlist) {
+        justlist.innerHTML = "";
+        array.forEach((el) => {
+          justlist.innerHTML += `
+      <li class="mutaxasis__item">
+              <a href="#" class="mutaxasis__link">
+                <img
+                  src="./img/mutaxasis__img1.svg"
+                  alt=""
+                  class="mutaxasis__img"
+                />
+
+                <div class="mutaxasis__text-blog">
+                  <h1 class="mutaxasis__item-title">
+                    ${el.name}
+                  </h1>
+                  <p class="mutaxasis__item-p">${el.description}</p>
+                </div>
+              </a>
+            </li>
+    `;
+        });
+      }
+
+      domgamutaxasis(mutaxasis, elmutaxasislist);
+
+      let elmutaxasisallbtn = document.querySelector(".mutaxasis__all-btn");
+
+      elmutaxasisallbtn.onclick = () => {
+        elmutaxasislist.classList.toggle("xizmat-all");
+      };
+    </script>
+  </body>
+</html>

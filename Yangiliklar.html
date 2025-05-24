@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/main.css" />
+  </head>
+
+  <style>
+    .page-blog__list {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+      justify-content: center;
+    }
+
+    .blog__item {
+      width: 100%;
+      max-width: 400px;
+      margin: 0 auto;
+    }
+
+    @media (max-width: 1300px) {
+      .page-blog__list {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 850px) {
+      .page-blog__list {
+        grid-template-columns: 1fr;
+      }
+      .blog__item .blog__item {
+        max-width: 290px;
+        width: 100%;
+      }
+    }
+
+    @media (max-width: 700px) {
+      .blog__item {
+        width: 290px;
+      }
+      .page__hero-inner {
+        padding: 50px 0;
+      }
+    }
+  </style>
+  <body>
+    <header class="header">
+      <div class="container">
+        <div class="header__inner">
+          <button class="header__burger-btn">
+            <img src="./img/burger.svg" alt="" class="header__burger" />
+          </button>
+
+          <div class="header-burger">
+            <ul class="header__burger-list">
+              <li class="header__burger-item">
+                <a href="./index.html" class="header__link">Biz haqimizda</a>
+              </li>
+              <li class="header__burger-item">
+                <a href="./Xizmatlarimiz.html" class="header__link"
+                  >Xizmatlarimiz</a
+                >
+              </li>
+              <li class="header__burger-item">
+                <a href="./Shifokorlar.html" class="header__link"
+                  >Shifokorlar</a
+                >
+              </li>
+              <li class="header__burger-item">
+                <a href="./Yangiliklar.html" class="header__link"
+                  >Yangiliklar</a
+                >
+              </li>
+              <li class="header__burger-item">
+                <a href="./index.html" class="header__link">Kontaktlar</a>
+              </li>
+            </ul>
+          </div>
+
+          <a href="./index.html" class="header__logo-link">
+            <img src="./img/side-logo.svg" alt="" class="header__logo" />
+          </a>
+
+          <ul class="header__list">
+            <li class="header__item">
+              <a href="./index.html" class="header__link">Biz haqimizda</a>
+            </li>
+            <li class="header__item">
+              <a href="./Xizmatlarimiz.html" class="header__link"
+                >Xizmatlarimiz</a
+              >
+            </li>
+            <li class="header__item">
+              <a href="./Shifokorlar.html" class="header__link">Shifokorlar</a>
+            </li>
+            <li class="header__item">
+              <a href="./Yangiliklar.html" class="header__link">Yangiliklar</a>
+            </li>
+            <li class="header__item">
+              <a href="./index.html" class="header__link">Kontaktlar</a>
+            </li>
+          </ul>
+
+          <button class="header__language">UZ</button>
+        </div>
+      </div>
+    </header>
+
+    <div class="page__hero">
+      <div class="container">
+        <div class="page__hero-inner">
+          <h1 class="page__hero-title">Yangiliklar</h1>
+          <a href="./index.html" class="page__hero-link"
+            >Bosh sahifa > Xizmatlarimiz</a
+          >
+        </div>
+      </div>
+    </div>
+
+    <section class="blog">
+      <div class="container">
+        <div class="blog__inner">
+          <ul class="page-blog__list">
+            <li class="blog__item">
+              <img src="./img/blog__img1.svg" alt="" class="blog__item-img" />
+
+              <div class="blog__item-text-blog">
+                <h3 class="blog__item-title">Как остановить облысение?</h3>
+
+                <p class="blog__item-p">
+                  Вас беспокоит выпадение и облысение? Это распространенная
+                  проблема, с которой сталкиваются многие люди. Знаете ли вы,
+                  что существуют естественные спо…
+                </p>
+
+                <hr />
+
+                <span class="blog__item-data">2024-03-27 05:35:54</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <script src="servis.js"></script>
+    <script>
+      //header
+      let elheaderburgerbtn = document.querySelector(".header__burger-btn");
+      let elheaderburger = document.querySelector(".header-burger");
+
+      elheaderburgerbtn.onclick = () => {
+        elheaderburger.classList.toggle("block");
+      };
+      //array
+      let elbloglist = document.querySelector(".page-blog__list");
+
+      function domgablog(array, justlist) {
+        justlist.innerHTML = "";
+
+        array.forEach((el) => {
+          justlist.innerHTML += `
+         <li class="blog__item">
+              <img src="./img/blog__img1.svg" alt="" class="blog__item-img" />
+
+              <div class="blog__item-text-blog">
+                <h3 class="blog__item-title">${el.title}</h3>
+
+                <p class="blog__item-p">
+                  ${el.description}
+                </p>
+
+                <hr />
+
+                <span class="blog__item-data">${el.date}</span>
+              </div>
+            </li>
+    `;
+        });
+      }
+
+      domgablog(blog, elbloglist);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,70 @@
+table {
+  width: 430px;
+  border-collapse: collapse;
+}
+th,
+td {
+  border-top: 1px solid #0000001f;
+  border-bottom: 1px solid #0000001f;
+  padding: 8px;
+  text-align: center;
+  padding: 10px;
+}
+th {
+  background-color: #f2f2f2;
+}
+
+td:first-child {
+  text-align: left;
+}
+td:last-child {
+  text-align: right;
+}
+
+.mutaxasis-section__inner {
+  display: flex;
+  margin-top: 100px;
+  gap: 30px;
+}
+.mutaxasis-section-text__blog {
+  padding: 20px 40px 160px 40px;
+}
+.mutaxasis-section-right {
+  max-width: 511px;
+  box-shadow: 0 0 25px 0 #dededebf;
+}
+.mutaxasis-section__img {
+  width: 511px;
+  height: 287px;
+}
+.mutaxasis-section__list {
+  margin-top: 35px;
+  margin-bottom: 40px;
+}
+.mutaxasis-section__item {
+  padding: 5px;
+}
+.mutaxasis-section__link {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 20px;
+  color: #00000099;
+}
+.mutaxasis-section__time-title {
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 33px;
+  color: #04243d;
+  margin-bottom: 30px;
+}
+
+
+.mutaxasis-section-left {
+}
+.mutaxasis-section__title {
+    font-size: ;
+}
+.mutaxasis-section__p {
+}
+.mutaxasis-section__subtitle {
+}

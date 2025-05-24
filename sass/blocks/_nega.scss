@@ -1,0 +1,64 @@
+.nega__inner {
+}
+.xizmat__top-text-blog {
+}
+
+.nega__activty {
+}
+.nega__text-blog {
+  margin-top: 24px;
+}
+.nega__title {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+  color: #000;
+}
+.nega__p {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+  color: #04243d;
+  max-width: 1200px;
+}
+.nage__list {
+  margin-top: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.nega__item {
+  background-color: #fff;
+  width: 320px;
+  padding: 80px 0 20px 0;
+  box-shadow: 0 0 25px 0 #dededebf;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    background-image: url(/img/nega__img1.svg);
+    width: 50px;
+    height: 50px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    top: 10px;
+    left: 120px;
+  }
+}
+.nega__item-title {
+  text-align: center;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  color: #04243d;
+}
+
+
+// @media (max-width:1500px){
+//   .nega__list {
+//     display: flex;
+//     width: 1500px;
+//     flex-wrap: wrap;
+//   }
+// }
