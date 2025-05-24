@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Expert Medical project</title>
     <link rel="stylesheet" href="./css/main.css" />
   </head>
 
@@ -45,8 +45,6 @@
         width: 300px;
       }
     }
-
-
   </style>
   <body>
     <header class="header">
@@ -130,6 +128,93 @@
       </div>
     </section>
 
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__inner">
+          <ul class="footer__list">
+            <li class="footer__item">
+              <h1 class="footer__title">KONTAKTLAR</h1>
+              <ul class="footer__item-list">
+                <li class="footer__item-item">
+                  <a href="#" class="footer__item-link">medicalexp@gmail.com</a>
+                </li>
+                <li class="footer__item-item">
+                  <a href="#" class="footer__item-link">+ 998 (71) 249-15-90</a>
+                </li>
+                <li class="footer__item-item">
+                  <a href="#" class="footer__item-link"
+                    >Toshkent sh, Shayxontour tumani, Beruniy shoh ko‘chasi,
+                    32-uy</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li class="footer__item">
+              <h1 class="footer__title">BIZ HAQIMIZDA</h1>
+              <ul class="footer__item-list">
+                <li class="footer__item-item">
+                  <a href="./Shifokorlar.html" class="footer__item-link"
+                    >Shifokorlar</a
+                  >
+                </li>
+                <li class="footer__item-item">
+                  <a href="./Xizmatlarimiz.html" class="footer__item-link"
+                    >Xizmatlarimiz</a
+                  >
+                </li>
+                <li class="footer__item-item">
+                  <a href="./Yangiliklar.html" class="footer__item-link"
+                    >Yangiliklar</a
+                  >
+                </li>
+                <li class="footer__item-item">
+                  <a href="#" class="footer__item-link">Maxfiylik siyosati</a>
+                </li>
+              </ul>
+            </li>
+            <li class="footer__item">
+              <h1 class="footer__title">BEMORLAR UCHUN</h1>
+              <ul class="footer__item-list">
+                <li class="footer__item-item">
+                  <a href="#" class="footer__item-link"
+                    >Uchrashuvni tayinlash uchun</a
+                  >
+                </li>
+                <li class="footer__item-item">
+                  <a href="#" class="footer__item-link"
+                    >Yuklab olish katalogi</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li class="footer__item">
+              <h1 class="footer__title">FIKR-MULOHAZA</h1>
+
+              <form action="#" class="footer__item-form">
+                <div class="footer__item-input-div">
+                  <input
+                    placeholder="F.I.O"
+                    type="text"
+                    class="footer__item-input"
+                  />
+                </div>
+                <div class="footer__item-input-div">
+                  <input
+                    placeholder="Telefon raqamingiz"
+                    type="text"
+                    class="footer__item-input"
+                  />
+                </div>
+
+                <span class="footer__item-span"></span>
+                <button class="footer__item-btn">Yuborish</button>
+              </form>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+
     <script src="servis.js"></script>
     <script>
       //header
@@ -150,7 +235,7 @@
                <li class="xizmat__item">
               <a href="./app.html?id=${el.id}" class="xizmat__link">
                 <img
-                  src="./img/servis-img1.svg"
+                  src="${el.image}"
                   alt=""
                   class="xizmat__item-img"
                 />

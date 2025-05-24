@@ -19,7 +19,7 @@ function domga(array, justlist) {
                <li class="xizmat__item">
               <a href="./app.html?id=${el.id}" class="xizmat__link">
                 <img
-                  src="./img/servis-img1.svg"
+                  src="${el.image}"
                   alt=""
                   class="xizmat__item-img"
                 />
@@ -54,7 +54,7 @@ function domgamutaxasis(array, justlist) {
       <li class="mutaxasis__item">
               <a href="./mutaxassis.html?id=${el.id}" class="mutaxasis__link">
                 <img
-                  src="./img/mutaxasis__img1.svg"
+                  src="${el.image}"
                   alt=""
                   class="mutaxasis__img"
                 />
@@ -90,7 +90,7 @@ function domgablog(array, justlist) {
     justlist.innerHTML += `
          <li class="blog__item">
          <a href="./app.html?id=${el.id}">
-              <img src="./img/blog__img1.svg" alt="" class="blog__item-img" />
+              <img src="${el.image}" alt="" class="blog__item-img" />
 
               <div class="blog__item-text-blog">
                 <h3 class="blog__item-title">${el.title}</h3>

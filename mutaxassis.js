@@ -6,9 +6,73 @@ let find = mutaxasis.find((el) => el.id === id);
 
 elherotitle.innerHTML = `${find.name}   ${find.description}`;
 
-let elmutaxasissectionleft = document.querySelector(".mutaxasis-section-left");
+let elmutaxasissectionleft = document.querySelector(".mutaxasis-section__inner");
 
 elmutaxasissectionleft.innerHTML = `
+
+  <div class="mutaxasis-section-right">
+            <img
+              src="${find.image}"
+              alt=""
+              class="mutaxasis-section__img"
+            />
+
+            <div class="mutaxasis-section-text__blog">
+              <h2 class="mutaxasis-section__title">
+                Bog'lanish uchun ma'lumot
+              </h2>
+              <ul class="mutaxasis-section__list">
+                <li class="mutaxasis-section__item">
+                  <a
+                    href="tel:+ 998 (71) 249-15-90"
+                    class="mutaxasis-section__link"
+                    >+ 998 (71) 249-15-90</a
+                  >
+                </li>
+                <li class="mutaxasis-section__item">
+                  <a href="#" class="mutaxasis-section__link"
+                    >medicalexp@gmail.com</a
+                  >
+                </li>
+                <li class="mutaxasis-section__item">
+                  <a href="#" class="mutaxasis-section__link">xona</a>
+                </li>
+              </ul>
+
+              <h2 class="mutaxasis-section__time-title">Ish vaqti</h2>
+
+              <table>
+                <tr>
+                  <td>Dushanba</td>
+                  <td>9:00 - 20:00</td>
+                </tr>
+                <tr>
+                  <td>Seshanba</td>
+                  <td>9:00 - 20:00</td>
+                </tr>
+                <tr>
+                  <td>Chorshanba</td>
+                  <td>9:00 - 20:00</td>
+                </tr>
+                <tr>
+                  <td>Payshanba</td>
+                  <td>9:00 - 20:00</td>
+                </tr>
+                <tr>
+                  <td>Juma</td>
+                  <td>9:00 - 20:00</td>
+                </tr>
+                <tr>
+                  <td>Shanba</td>
+                  <td>9:00 - 20:00</td>
+                </tr>
+              </table>
+            </div>
+          </div>
+
+          <div class="mutaxasis-section-left">
+   
+
     <h1 class="mutaxasis-section__title">
                 ${find.name}
               </h1>
@@ -71,4 +135,6 @@ elmutaxasissectionleft.innerHTML = `
               </p>
               <h1 class="mutaxasis-section__title">Tajriba</h1>
               <p class="mutaxasis-section__p">23 yil</p>
+
+                     </div>
 `;

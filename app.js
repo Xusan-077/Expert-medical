@@ -5,7 +5,7 @@ let id = new URLSearchParams(window.location.search).get("id");
 let find = servis.find((el) => el.id == id) || blog.find((el) => el.id == id);
 
 elinner.innerHTML = `
-       <img src="./img/servis-img1.svg" alt="" class="xizmat-section__img" />
+       <img src="${find.image}" alt="" class="xizmat-section__img" />
 
           <h1 class="xizmat-section__title">${find.title}</h1>
 
