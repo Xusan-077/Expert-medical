@@ -3,49 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Expert Medical project</title>
+    <title>Document</title>
     <link rel="stylesheet" href="./css/main.css" />
   </head>
-
-  <style>
-    .page-xizmat__list {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 30px;
-      justify-items: center;
-    }
-
-    .page-xizmat__item {
-      width: 100%;
-      max-width: 400px;
-    }
-
-    .page-xizmat__img {
-      width: 100%;
-      height: auto;
-    }
-
-    @media (max-width: 1300px) {
-      .page-xizmat__list {
-        grid-template-columns: repeat(2, 1fr);
-      }
-    }
-
-    @media (max-width: 900px) {
-      .page-xizmat__list {
-        grid-template-columns: repeat(1, 1fr);
-      }
-    }
-
-    @media (max-width: 600px) {
-      .page__hero-inner {
-        padding: 50px 0;
-      }
-      .xizmat__item {
-        width: 300px;
-      }
-    }
-  </style>
   <body>
     <header class="header">
       <div class="container">
@@ -112,21 +72,13 @@
     <div class="page__hero">
       <div class="container">
         <div class="page__hero-inner">
-          <h1 class="page__hero-title">Xizmatlarimiz</h1>
+          <h1 class="page__hero-title">Kontaktlar</h1>
           <a href="./index.html" class="page__hero-link"
             >Bosh sahifa > Xizmatlarimiz</a
           >
         </div>
       </div>
     </div>
-
-    <section class="xizmat">
-      <div class="container">
-        <div class="xizmat__inner">
-          <ul class="page-xizmat__list"></ul>
-        </div>
-      </div>
-    </section>
 
     <footer class="footer">
       <div class="container">
@@ -215,7 +167,6 @@
       </div>
     </footer>
 
-    <script src="servis.js"></script>
     <script>
       //header
       let elheaderburgerbtn = document.querySelector(".header__burger-btn");
@@ -224,34 +175,6 @@
       elheaderburgerbtn.onclick = () => {
         elheaderburger.classList.toggle("block");
       };
-      //array
-      let elxizmatlist = document.querySelector(".page-xizmat__list");
-
-      function domga(array, justlist) {
-        justlist.innerHTML = "";
-
-        array.forEach((el) => {
-          justlist.innerHTML += `
-               <li class="xizmat__item">
-              <a href="./app.html?id=${el.id}" class="xizmat__link">
-                <img
-                  src="${el.image}"
-                  alt=""
-                  class="xizmat__item-img"
-                />
-                <div class="xizmat__text-blog">
-                  <h1 class="xizmat__item-title">${el.title}</h1>
-                  <p class="xizmat__item-p">
-                   ${el.description}
-                  </p>
-                </div>
-              </a>
-            </li>
-        `;
-        });
-      }
-
-      domga(servis, elxizmatlist);
     </script>
   </body>
 </html>
